@@ -13,8 +13,9 @@ body {
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 .site-header { border-bottom: 1px solid var(--rule); padding: 18px 0; }
-.site-header .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px; }
-.site-title { font-weight: 700; font-size: 1.15rem; color: var(--fg); }
+.site-header .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px; }
+.site-title { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.15rem; color: var(--fg); }
+.site-title img { width: 32px; height: 32px; border-radius: 6px; }
 nav a { margin-left: 18px; color: var(--muted); }
 nav a:first-child { margin-left: 0; }
 main.wrap { padding-top: 32px; padding-bottom: 48px; }

@@ -3,6 +3,7 @@ description: Open data infrastructure for agentic and scientific workflows.
 url: https://agentic-data-infra.github.io
 baseurl: ""
 github_org: agentic-data-infra
+logo: /assets/images/logo.png
 
 markdown: kramdown
 highlighter: rouge
