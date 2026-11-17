@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Introducing Ember"
+title: "Introducing Ember: Data Processing for Agents"
 author: "Patrick Stuedi"
 date: 2026-11-17 10:30:00 -0800
 description: "A distributed DataFrame engine for agents: content-hashed stages, model calls as expressions, and shuffle that outlives its workers."
@@ -36,8 +36,9 @@ runs = ember.read.parquet("runs.parquet")
      .show())
 ```
 
-While Ember's main target is a cluster, it also runs on a single machine. In
-local mode the driver and an executor live inside the caller's process, so a small
+While Ember is designed for HPC clusters with GPUs and RDMA networks, it runs
+equally well on ordinary cloud clusters with CPUs and regular NICs, and on a
+single machine. In local mode the driver and an executor live inside the caller's process, so a small
 query from an agent, or a quick test on a laptop, needs no cluster at all. The
 same program moves from one to the other without changes.
 
@@ -134,7 +135,7 @@ current list.
 | | Today | Planned |
 | --- | --- | --- |
 | Reuse | <span class="item" markdown="span">Content-keyed stages, shown by `explain()`</span><span class="item" markdown="span">Reuse within a session, and across runs of the same build through Kiln's catalog</span><span class="item" markdown="span">`cache()` and `persist()`</span> | <span class="item" markdown="span">Reuse across sessions and agents, through a persistent driver and catalog</span><span class="item" markdown="span">Deciding what to keep from predicted reuse</span> |
-| Execution | <span class="item" markdown="span">Task retry and recompute from lineage</span><span class="item" markdown="span">Shuffle and datasets in Kiln, over one-sided RDMA</span> | <span class="item" markdown="span">Shared scans across concurrent queries</span><span class="item" markdown="span">Differential execution from where a candidate diverges from its baseline</span><span class="item" markdown="span">Progressive results with tightening confidence intervals</span> |
+| Execution | <span class="item" markdown="span">Task retry and recompute from lineage</span><span class="item" markdown="span">Shuffle and datasets in Kiln, over one-sided RDMA</span> | <span class="item" markdown="span">Shared scans across concurrent queries</span><span class="item" markdown="span">Differential execution from where a candidate diverges from its baseline</span><span class="item" markdown="span">Progressive results with tightening confidence intervals</span><span class="item" markdown="span">GPUDirect RDMA shuffle: map outputs move directly between GPU memories</span> |
 | Models | `ai.generate` with typed outputs, called only on rows that reach it, reused like any stage | Models next to the data: inference on the job's own GPUs |
 | Operations | Local mode, Kubernetes clusters, a Python wheel | <span class="item" markdown="span">Many hosts on real RDMA networks</span><span class="item" markdown="span">GPU execution through Velox's cuDF backend</span><span class="item" markdown="span">Elastic scale-out and scale-in</span><span class="item" markdown="span">Lineage and guardrails as queryable tables</span> |
 {: .compare .lead}
