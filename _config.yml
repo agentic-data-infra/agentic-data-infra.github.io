@@ -1,0 +1,20 @@
+title: Agentic Data Infra
+description: Open data infrastructure for agentic and scientific workflows.
+url: https://agentic-data-infra.github.io
+baseurl: ""
+github_org: agentic-data-infra
+
+markdown: kramdown
+highlighter: rouge
+permalink: /blog/:year/:month/:day/:title/
+timezone: America/Los_Angeles
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
