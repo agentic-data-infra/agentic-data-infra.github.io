@@ -71,6 +71,7 @@ every assumption behind its design changes with it.
 | Tolerated latency | Minutes to hours | Every second of waiting is an idle reasoning step |
 | Result consumer | Dashboards and notebooks | Models reading compact, structured results |
 | Failure handling | A human reads the error | Errors must be actionable by a model |
+{: .compare}
 
 Five properties of this workload drive our design:
 
