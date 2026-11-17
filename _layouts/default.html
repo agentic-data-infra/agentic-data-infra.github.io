@@ -6,12 +6,12 @@
   {% seo %}
   {% feed_meta %}
   <link rel="icon" type="image/png" href="{{ '/assets/images/logo.png' | relative_url }}">
-  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 </head>
 <body>
   <header class="site-header">
     <div class="wrap">
-      <a class="site-title" href="{{ '/' | relative_url }}"><img src="{{ '/assets/images/logo.png' | relative_url }}" width="32" height="32" alt="">{{ site.title }}</a>
+      <a class="site-title" href="{{ '/' | relative_url }}"><picture><source srcset="{{ '/assets/images/logo-mark-dark.png' | relative_url }}" media="(prefers-color-scheme: dark)"><img src="{{ '/assets/images/logo-mark.png' | relative_url }}" width="28" height="28" alt=""></picture>{{ site.title }}</a>
       <nav>
         <a href="{{ '/' | relative_url }}">About</a>
         <a href="{{ '/blog/' | relative_url }}">Blog</a>
