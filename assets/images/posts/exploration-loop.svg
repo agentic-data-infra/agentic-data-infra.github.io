@@ -1,93 +1,93 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 520" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" xmlns:c2pa="http://c2pa.org/manifest">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 808 372" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
   <style>
-    .bg { fill: #ffffff; }
-    .step { fill: #f4f5f7; stroke: #8a929c; }
-    .data { fill: #eaf1f9; stroke: #2a5a9a; }
-    .sys { fill: #ffffff; stroke: #2a5a9a; }
+    .panel { fill: #f6f6f3; }
+    .node { fill: #ffffff; stroke: #dcdcd6; }
+    .pill { fill: #ffffff; stroke: #dcdcd6; }
+    .band { fill: #e6eef8; stroke: #1f3a5f; stroke-width: 1.3; }
+    .chip { fill: #ffffff; stroke: #c3d3e8; }
+    .num { fill: #8a8f96; font: 500 11px ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: 0.08em; }
     .t { fill: #1f2328; font-size: 15px; font-weight: 600; }
-    .s { fill: #4b535c; font-size: 12.5px; }
-    .d { fill: #2a5a9a; font-size: 12.5px; }
-    .lbl { fill: #656d76; font-size: 12px; font-style: italic; }
-    .arrow { stroke: #4b535c; stroke-width: 1.6; fill: none; }
-    .link { stroke: #2a5a9a; stroke-width: 1.4; fill: none; stroke-dasharray: 5 4; }
-    .head { fill: #4b535c; }
-    .headb { fill: #2a5a9a; }
+    .s { fill: #626a73; font-size: 12.5px; }
+    .bt { fill: #1f3a5f; font-size: 14px; font-weight: 600; }
+    .bs { fill: #4b5d75; font-size: 12.5px; }
+    .ct { fill: #1f3a5f; font-size: 12.5px; }
+    .lbl { fill: #8a8f96; font-size: 12px; }
+    .arrow { stroke: #a3a8ae; stroke-width: 1.3; fill: none; }
+    .data { stroke: #1f3a5f; stroke-width: 1.3; fill: none; }
+    .head { fill: #a3a8ae; }
+    .headd { fill: #1f3a5f; }
     @media (prefers-color-scheme: dark) {
-      .bg { fill: #0f1115; }
-      .step { fill: #1a1d23; stroke: #5d6570; }
-      .data { fill: #15202e; stroke: #8fb3e0; }
-      .sys { fill: #0f1115; stroke: #8fb3e0; }
+      .panel { fill: #16191e; }
+      .node, .pill { fill: #1d2127; stroke: #2e343c; }
+      .band { fill: #17243a; stroke: #8fb3e0; } .chip { fill: #1d2127; stroke: #2e4a6e; } .bt, .ct { fill: #c3d6ef; }
       .t { fill: #e6e6e6; }
-      .s { fill: #b4bbc4; }
-      .d, .lbl { fill: #8fb3e0; }
-      .arrow { stroke: #b4bbc4; }
-      .link { stroke: #8fb3e0; }
-      .head { fill: #b4bbc4; }
-      .headb { fill: #8fb3e0; }
+      .s { fill: #a9b0b9; }
+      .bs { fill: #c3d3e8; }
+      .arrow { stroke: #5f6670; }
+      .data { stroke: #8fb3e0; }
+      .head { fill: #5f6670; }
+      .headd { fill: #8fb3e0; }
     }
   </style>
   <defs>
-    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="head" d="M0,0 L10,5 L0,10 z"/></marker>
-    <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="headb" d="M0,0 L10,5 L0,10 z"/></marker>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path class="head" d="M0,1 L9,5 L0,9 z"/></marker>
+    <marker id="d" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path class="headd" d="M0,1 L9,5 L0,9 z"/></marker>
   </defs>
-  <rect class="bg" width="760" height="520"/>
+  <rect class="panel" width="808" height="372" rx="18"/>
 
   <!-- objective -->
-  <rect class="step" x="70" y="16" width="330" height="50" rx="10"/>
-  <text class="t" x="235" y="38" text-anchor="middle">Scientists</text>
-  <text class="s" x="235" y="56" text-anchor="middle">set the objective, approve scale-ups</text>
-  <path class="arrow" d="M235,66 L235,92" marker-end="url(#a)"/>
+  <rect class="pill" x="24" y="18" width="330" height="32" rx="16"/>
+  <text x="40" y="39"><tspan class="t" font-size="13">Scientists</tspan><tspan class="s" dx="8">set the objective, approve scale-ups</tspan></text>
+  <path class="arrow" d="M70,50 L70,98" marker-end="url(#a)"/>
+
+  <!-- next round -->
+  <path class="arrow" d="M698,102 L698,76 L150,76 L150,98" marker-end="url(#a)"/>
+  <text class="lbl" x="424" y="68" text-anchor="middle">next round</text>
 
   <!-- steps -->
-  <rect class="step" x="70" y="96" width="330" height="72" rx="10"/>
-  <text class="t" x="88" y="122">1  Propose</text>
-  <text class="s" x="88" y="141">Agents form new hypotheses</text>
-  <text class="d" x="88" y="158">Data: mine past results</text>
-  <path class="arrow" d="M235,168 L235,200" marker-end="url(#a)"/>
-  <text class="lbl" x="245" y="189">hundreds of variants</text>
+  <rect class="node" x="24" y="102" width="172" height="90" rx="12"/>
+  <text class="num" x="40" y="124">01</text>
+  <text class="t" x="40" y="146">Propose</text>
+  <text class="s" x="40" y="166">Agents form new</text>
+  <text class="s" x="40" y="182">hypotheses</text>
 
-  <rect class="step" x="70" y="204" width="330" height="72" rx="10"/>
-  <text class="t" x="88" y="230">2  Implement</text>
-  <text class="s" x="88" y="249">Agents change code or data</text>
-  <text class="d" x="88" y="266">Data: build candidate datasets</text>
-  <path class="arrow" d="M235,276 L235,308" marker-end="url(#a)"/>
-  <text class="lbl" x="245" y="297">small runs first</text>
+  <rect class="node" x="220" y="102" width="172" height="90" rx="12"/>
+  <text class="num" x="236" y="124">02</text>
+  <text class="t" x="236" y="146">Implement</text>
+  <text class="s" x="236" y="166">Agents change code</text>
+  <text class="s" x="236" y="182">or data</text>
 
-  <rect class="step" x="70" y="312" width="330" height="72" rx="10"/>
-  <text class="t" x="88" y="338">3  Run</text>
-  <text class="s" x="88" y="357">Train, simulate or run the lab</text>
-  <text class="d" x="88" y="374">Data: feed trainers and simulators</text>
-  <path class="arrow" d="M235,384 L235,416" marker-end="url(#a)"/>
-  <text class="lbl" x="245" y="405">results</text>
+  <rect class="node" x="416" y="102" width="172" height="90" rx="12"/>
+  <text class="num" x="432" y="124">03</text>
+  <text class="t" x="432" y="146">Run</text>
+  <text class="s" x="432" y="166">Train, simulate or</text>
+  <text class="s" x="432" y="182">run the lab</text>
 
-  <rect class="step" x="70" y="420" width="330" height="72" rx="10"/>
-  <text class="t" x="88" y="446">4  Evaluate</text>
-  <text class="s" x="88" y="465">Score candidates against the baseline</text>
-  <text class="d" x="88" y="482">Data: per-slice deltas, ledger</text>
+  <rect class="node" x="612" y="102" width="172" height="90" rx="12"/>
+  <text class="num" x="628" y="124">04</text>
+  <text class="t" x="628" y="146">Evaluate</text>
+  <text class="s" x="628" y="166">Score candidates</text>
+  <text class="s" x="628" y="182">against the baseline</text>
 
-  <!-- loop back -->
-  <path class="arrow" d="M70,456 L36,456 L36,132 L66,132" marker-end="url(#a)"/>
-  <text class="lbl" x="28" y="300" text-anchor="middle" transform="rotate(-90 28 300)">next round</text>
+  <path class="arrow" d="M196,147 L216,147" marker-end="url(#a)"/>
+  <path class="arrow" d="M392,147 L412,147" marker-end="url(#a)"/>
+  <path class="arrow" d="M588,147 L608,147" marker-end="url(#a)"/>
 
-  <!-- data layer -->
-  <rect class="data" x="520" y="96" width="210" height="396" rx="12"/>
-  <text class="t" x="625" y="126" text-anchor="middle">Shared data layer</text>
-  <text class="s" x="625" y="150" text-anchor="middle">one plan representation</text>
-  <text class="s" x="625" y="168" text-anchor="middle">and one cache for the loop</text>
-  <rect class="sys" x="528" y="215" width="194" height="32" rx="8"/>
-  <text class="d" x="625" y="236" text-anchor="middle">data preparation</text>
-  <rect class="sys" x="528" y="261" width="194" height="32" rx="8"/>
-  <text class="d" x="625" y="282" text-anchor="middle">model inference</text>
-  <rect class="sys" x="528" y="307" width="194" height="32" rx="8"/>
-  <text class="d" x="625" y="328" text-anchor="middle">training and simulation feeds</text>
-  <rect class="sys" x="528" y="353" width="194" height="32" rx="8"/>
-  <text class="d" x="625" y="374" text-anchor="middle">evaluation</text>
-  <text class="s" x="625" y="440" text-anchor="middle">work done for one experiment</text>
-  <text class="s" x="625" y="458" text-anchor="middle">is reused by every later one</text>
+  <!-- data arrows -->
+  <path class="data" d="M110,196 L110,242" marker-start="url(#d)" marker-end="url(#d)"/>
+  <path class="data" d="M306,196 L306,242" marker-start="url(#d)" marker-end="url(#d)"/>
+  <path class="data" d="M502,196 L502,242" marker-start="url(#d)" marker-end="url(#d)"/>
+  <path class="data" d="M698,196 L698,242" marker-start="url(#d)" marker-end="url(#d)"/>
 
-  <!-- data links -->
-  <path class="link" d="M400,132 L516,180" marker-end="url(#b)"/>
-  <path class="link" d="M400,240 L516,260" marker-end="url(#b)"/>
-  <path class="link" d="M400,348 L516,340" marker-end="url(#b)"/>
-  <path class="link" d="M400,456 L516,420" marker-end="url(#b)"/>
-<metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTpkZGIyZDNiMi1lMjEwLTQyNTYtYjllNi03MzdiODVkOTRhNWEAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaKsG5h1R9T7nXB9Fa1UezyUAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDoyZDYwMTZkZS03NDc0LTQxNDgtOTBiMC00MTE5YmFkZjc3OTJscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoG5PmpHh4eQey6wKVaBqjzgAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggiAT2fN0ltf8bT6oavFGIrOWBkyBn3FRDoYjwnHRiXyykZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaKd6ONmt9pi8cbK6k5BVJGYAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYIBU2S5zmaBOGvdLioVXA9BQ3XrGJUm91HlOg4IpDNTO8ZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GRPJZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOmRkYjJkM2IyLWUyMTAtNDI1Ni1iOWU2LTczN2I4NWQ5NGE1YS9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjhhNDMzOGUwLTU2NjItNDQyZC04N2JlLTgwNWFkODFlNzVjYXJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCCIBPZ83SW1/xtPqhq8UYis5YGTIGfcVEOhiPCcdGJfLKJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggFtze7w6f+0JMkOZdDASlsAqrTcTVtD7KRv8f/xzuYXWiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggUACXQRdzKegAPjtarV56BB08rmkDrL2ahEifvFRjiBt0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQHp9uJ43Vlc9Mm0pWuQ7hH12gp9wpAfDyrrd8B31rVTORv+MFRogNj7JIRxegV90nMwhu7m0Lrad3uWVfmBr9+o=</c2pa:manifest></metadata></svg>
+  <!-- shared data layer -->
+  <rect class="band" x="24" y="246" width="760" height="106" rx="14"/>
+  <rect class="chip" x="36" y="258" width="148" height="34" rx="8"/>
+  <text class="ct" x="110" y="280" text-anchor="middle">mine past results</text>
+  <rect class="chip" x="232" y="258" width="148" height="34" rx="8"/>
+  <text class="ct" x="306" y="280" text-anchor="middle">build datasets</text>
+  <rect class="chip" x="428" y="258" width="148" height="34" rx="8"/>
+  <text class="ct" x="502" y="280" text-anchor="middle">feed trainers</text>
+  <rect class="chip" x="624" y="258" width="148" height="34" rx="8"/>
+  <text class="ct" x="698" y="280" text-anchor="middle">per-slice deltas</text>
+  <text x="40" y="330"><tspan class="bt">Shared data layer</tspan><tspan class="bs" dx="10">one plan representation and one cache; work done for one experiment is reused by every later one</tspan></text>
+</svg>
