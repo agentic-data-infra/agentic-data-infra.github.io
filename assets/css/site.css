@@ -33,3 +33,9 @@ pre, code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-si
 pre { overflow-x: auto; padding: 12px; border: 1px solid var(--rule); border-radius: 6px; }
 img { max-width: 100%; }
 .site-footer { border-top: 1px solid var(--rule); padding: 18px 0; color: var(--muted); font-size: 0.9rem; }
+table { border-collapse: collapse; width: 100%; margin: 20px 0; font-size: 0.92rem; }
+th, td { text-align: left; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid var(--rule); }
+th { border-bottom-width: 2px; }
+figure { margin: 28px 0; }
+figure img { display: block; width: 100%; height: auto; }
+figcaption { margin-top: 10px; color: var(--muted); font-size: 0.9rem; }
