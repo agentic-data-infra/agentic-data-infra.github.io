@@ -36,7 +36,7 @@
   <rect class="panel" width="808" height="372" rx="18"/>
 
   <!-- objective -->
-  <rect class="pill" x="24" y="18" width="330" height="32" rx="16"/>
+  <rect class="pill" x="24" y="18" width="370" height="32" rx="16"/>
   <text x="40" y="39"><tspan class="t" font-size="13">Scientists</tspan><tspan class="s" dx="8">set the objective, approve scale-ups</tspan></text>
   <path class="arrow" d="M70,50 L70,98" marker-end="url(#a)"/>
 
@@ -89,5 +89,5 @@
   <text class="ct" x="502" y="280" text-anchor="middle">feed trainers</text>
   <rect class="chip" x="624" y="258" width="148" height="34" rx="8"/>
   <text class="ct" x="698" y="280" text-anchor="middle">per-slice deltas</text>
-  <text x="40" y="330"><tspan class="bt">Shared data layer</tspan><tspan class="bs" dx="10">one plan representation and one cache; work done for one experiment is reused by every later one</tspan></text>
+  <text x="40" y="330"><tspan class="bt">Shared data layer</tspan><tspan class="bs" dx="10">one plan representation and one cache, reused by every later experiment</tspan></text>
 </svg>
