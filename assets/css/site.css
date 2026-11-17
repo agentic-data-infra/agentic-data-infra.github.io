@@ -53,3 +53,13 @@ figcaption { margin-top: 10px; color: var(--muted); font-size: 0.9rem; }
 .compare td:nth-child(3) { color: var(--fg); background: var(--tint); }
 .compare tr:first-child th:nth-child(3) { background: var(--tint); border-radius: 10px 10px 0 0; }
 .compare tr:last-child td:nth-child(3) { border-radius: 0 0 10px 10px; }
+/* .lead: highlight the first comparison column instead of the last */
+.compare.lead td:first-child { width: 16%; }
+.compare.lead td:nth-child(2), .compare.lead td:nth-child(3) { width: 42%; }
+.compare.lead td:nth-child(2) { color: var(--fg); background: var(--tint); }
+.compare.lead td:nth-child(3) { color: var(--muted); background: none; }
+.compare.lead th:nth-child(2) { color: var(--brand-ink); background: var(--tint); border-radius: 10px 10px 0 0; }
+.compare.lead th:nth-child(3), .compare.lead tr:first-child th:nth-child(3) { color: var(--muted); background: none; }
+.compare.lead tr:last-child td:nth-child(2) { border-radius: 0 0 10px 10px; }
+.compare .item { display: block; }
+.compare .item + .item { margin-top: 7px; }
