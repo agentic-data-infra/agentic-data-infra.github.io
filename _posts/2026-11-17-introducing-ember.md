@@ -3,7 +3,8 @@ layout: post
 title: "Introducing Ember: Data Processing for Agents"
 author: "Patrick Stuedi"
 date: 2026-11-17 10:30:00 -0800
-description: "A distributed DataFrame engine for agents: content-hashed stages, model calls as expressions, and shuffle that outlives its workers."
+description: "Data processing for agents: Ember reuses unchanged stages automatically, treats model calls as DataFrame expressions, and keeps shuffle data alive when workers fail."
+image: /assets/images/social/introducing-ember.png
 ---
 
 In our [first post]({{ '/blog/2026/11/17/data-infrastructure-for-the-agentic-loop/' | relative_url }})
