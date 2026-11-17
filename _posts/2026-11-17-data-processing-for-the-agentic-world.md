@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Data processing for the agentic world"
-author: "Patrick Stuedi"
 description: "When agents launch the jobs and agents read the results, the data layer sets the pace of discovery. Why we are building new infrastructure for it."
 ---
 
