@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Data infrastructure for the agentic loop"
+author: "Patrick Stuedi"
 description: "Why agents that run experiments need a new kind of data layer, and what we are building for it."
 ---
 
