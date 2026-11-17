@@ -101,6 +101,11 @@ inputs.
 
 ## First numbers
 
+Ember's performance rests on two choices. It is native C++ end to end, on
+Velox's vectorized engine, with no JVM to start, warm up or garbage-collect, and
+it is built for HPC hardware: one-sided RDMA for shuffle today, with GPU
+execution and GPUDirect shuffle on the roadmap.
+
 We started with a 20 GB sort: simple, shuffle-heavy, and easy to validate. We
 compared Ember with Spark 3.5 (DataFrame), Spark with Gluten 1.7 (Velox
 native) and Ray Data 2.60, each reading and writing Parquet, at equal memory
