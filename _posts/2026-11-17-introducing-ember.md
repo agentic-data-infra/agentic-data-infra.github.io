@@ -15,8 +15,8 @@ sets it apart, and how it does on its first benchmarks.
 
 ## What Ember is
 
-Ember is a distributed data processing framework written in C++20, built for
-large datasets on a cluster. Programs are written against a DataFrame API in
+Ember is a distributed framework, written in C++20, for processing large
+datasets on a cluster. Programs are written against a DataFrame API in
 Python or C++. Ember uses
 [Axiom](https://github.com/facebookincubator/axiom) for query optimization and
 distributed planning,
