@@ -36,9 +36,8 @@ runs = ember.read.parquet("runs.parquet")
      .show())
 ```
 
-Ember's main target is a cluster: many workers on Kubernetes, processing
-datasets far larger than one machine. It also runs on a single node. In local
-mode the driver and an executor live inside the caller's process, so a small
+While Ember's main target is a cluster, it also runs on a single machine. In
+local mode the driver and an executor live inside the caller's process, so a small
 query from an agent, or a quick test on a laptop, needs no cluster at all. The
 same program moves from one to the other without changes.
 
