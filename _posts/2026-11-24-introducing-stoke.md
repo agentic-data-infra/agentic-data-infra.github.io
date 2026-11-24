@@ -231,9 +231,9 @@ trainers instead of real models. The rates are far above what a single GPU
 consumes; they show how much feed each loader produces per CPU. The
 Kubernetes nodes share one host's cores and a loopback network, so RDMA
 between real hosts is not part of these numbers. Stoke also holds more
-memory than Grain, mostly Kiln DRAM for chunks in flight. We are now running
-Stoke at scale, on clusters with GPUs and RDMA networks and with real
-training workloads, and we will share those numbers soon.
+memory than Grain, mostly Kiln DRAM for chunks in flight. Next, we will
+share numbers at scale, from clusters with accelerators and RDMA networks
+running real training workloads.
 
 ## Where Stoke stands
 
