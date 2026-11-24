@@ -4,6 +4,7 @@ title: "Stoke: A Distributed Dataloader for PyTorch"
 author: "Patrick Stuedi"
 date: 2026-11-24 00:00:00 -0800
 description: "Stoke streams training batches to PyTorch from a running Ember job: preprocessing gets a full DataFrame API, distributed execution and fault tolerance from Ember, and the dataloader itself is just a batch-aware sink and a queue."
+image: /assets/images/social/introducing-stoke.png
 ---
 
 In our [last post]({{ '/blog/2026/11/17/introducing-ember/' | relative_url }})
