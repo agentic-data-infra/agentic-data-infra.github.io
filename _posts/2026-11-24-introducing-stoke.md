@@ -7,7 +7,7 @@ description: "Stoke streams training batches to PyTorch from a running Ember job
 image: /assets/images/social/introducing-stoke.png
 ---
 
-In our last [post]({{ '/blog/2026/11/17/introducing-ember/' | relative_url }})
+In our [last post]({{ '/blog/2026/11/17/introducing-ember/' | relative_url }})
 we introduced [Ember](https://github.com/agentic-data-infra/ember), the distributed data processing framework at the center of our
 data layer. This post is about
 [Stoke](https://github.com/agentic-data-infra/stoke), a distributed dataloader
