@@ -169,9 +169,13 @@ From Ember, unchanged:
   `unionAll` of two corpora.
 - **Performance.** Preprocessing runs in Ember's native C++ engine, on
   Velox's vectorized operators across all cores, with no per-record Python.
-  The trainer host does no preprocessing at all.
-- **Distributed execution.** One Ember job, on any number of workers, feeds
-  every rank.
+  None of it runs in the trainers' Python code.
+- **Distributed execution.** One Ember job feeds every rank, and its
+  workers scale independently of the trainers. They can run on the trainer
+  hosts, using CPUs the trainers leave idle, on any other machines in the
+  datacenter that reach the trainers over the network (for example, a
+  disaggregated dataloader tier), or on both at once, so a feed that
+  outgrows the trainer hosts just adds machines.
 - **Fault tolerance.** When a worker fails, Ember retries its tasks.
 
 From Stoke, for streaming:
