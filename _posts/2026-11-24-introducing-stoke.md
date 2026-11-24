@@ -174,8 +174,8 @@ From Ember, unchanged:
   workers scale independently of the trainers. They can run on the trainer
   hosts, using CPUs the trainers leave idle, on any other machines in the
   datacenter that reach the trainers over the network (for example, a
-  disaggregated dataloader tier), or on both, so a feed that outgrows the
-  trainer hosts just adds machines.
+  disaggregated dataloader tier), or on both. When preprocessing needs more
+  CPU than the trainer hosts can spare, Stoke scales out to more machines.
 - **Fault tolerance.** When a worker fails, Ember retries its tasks.
 
 From Stoke, for streaming:
