@@ -2,7 +2,7 @@
 layout: post
 title: "Stoke: A Distributed Dataloader for PyTorch"
 author: "Patrick Stuedi"
-date: 2026-11-23 00:00:00 -0800
+date: 2026-11-24 00:00:00 -0800
 description: "Stoke streams training batches to PyTorch from a running Ember job: preprocessing gets a full DataFrame API, distributed execution and fault tolerance from Ember, and the dataloader itself is just a batch-aware sink and a queue."
 ---
 
@@ -226,11 +226,14 @@ Python worker processes per trainer. On four nodes, where three quarters of
 the chunks cross the network, Stoke keeps a 2.3x to 2.7x lead, and local
 writes bring it back to 2.5x to 3.4x.
 
-As with Ember, these are early runs on one machine. The rates are far above
-what a single GPU consumes; they show how much feed each loader produces per
-CPU. The Kubernetes nodes share one host's cores and a loopback network, so
-RDMA between real hosts is not part of these numbers. Stoke also holds more
-memory than Grain, mostly Kiln DRAM for chunks in flight.
+As with Ember, these are early signals from one machine, with synthetic
+trainers instead of real models. The rates are far above what a single GPU
+consumes; they show how much feed each loader produces per CPU. The
+Kubernetes nodes share one host's cores and a loopback network, so RDMA
+between real hosts is not part of these numbers. Stoke also holds more
+memory than Grain, mostly Kiln DRAM for chunks in flight. We are now running
+Stoke at scale, on clusters with GPUs and RDMA networks and with real
+training workloads, and we will share those numbers soon.
 
 ## Where Stoke stands
 
